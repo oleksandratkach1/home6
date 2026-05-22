@@ -33,7 +33,7 @@ files = [f for f in os.listdir(folder) if f.endswith(".txt")]
 
 sets = []
 for f in files:
-    with open(f, encoding="utf-8") as file:
+    with open(f, encoding="cp1251") as file:
         words = re.findall(r'\b\w+\b', file.read().lower())
     sets.append(CustomSet(words))
 
